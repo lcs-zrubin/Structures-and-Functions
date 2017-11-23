@@ -21,3 +21,21 @@ import Foundation
 */
 
 // Begin here... once you teach the computer to do this, you will never need to do it by hand again! :)
+
+struct Point {
+    var x : Double = 0
+    var y : Double = 0
+}
+struct Line {
+    var rise : Double = 0
+    var run : Double = 0
+    var yInt : Double = 0
+}
+
+var harvey = Line(rise: 1, run: 2, yInt: 5)
+var pointy = Point(x: 6, y: 7)
+
+var harveySlope : Double = harvey.rise / harvey.run
+var harveyNegRecip : Double = (harvey.run / harvey.rise)*(-1)
+var pointyLineIntercept : Double = (pointy.y - (harveyNegRecip * pointy.x))
+
