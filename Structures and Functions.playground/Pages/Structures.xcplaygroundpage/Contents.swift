@@ -29,7 +29,10 @@ import Foundation
 */
 
 // Define the structure here
-
+struct Point {
+    var x : Double = 0.0
+    var y : Double = 0.0
+}
 /*:
  
  Now, use the newly defined structure to create points at (0, 0) and (3, 4):
@@ -41,7 +44,8 @@ import Foundation
  */
 
 // Create the points here
-
+var start = Point()
+var end = Point(x: 3.0, y: 4.0)
 /*:
  
  You can query a structure to find the value of an individual variable stored within the structure.
@@ -58,7 +62,10 @@ import Foundation
 */
 
 // Query the points here to find the x and y values separately
-
+start.x
+start.y
+end.x
+end.y
 
 /*:
  ### Refactoring code
@@ -83,8 +90,13 @@ import Foundation
 
 // Re-define the distance function here
 
+func distance(from: Point, to: Point) -> Double {
+    return sqrt(pow(start.x - end.x, 2) + pow(start.y - end.y, 2))
+}
 
 // Invoke the new function here
+
+    distance(from: start, to: end)
 
 
 /*:
