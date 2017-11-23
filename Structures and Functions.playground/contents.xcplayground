@@ -4,5 +4,6 @@
         <page name='Introduction'/>
         <page name='No Return Values'/>
         <page name='Return Values'/>
+        <page name='Structures'/>
     </pages>
 </playground>

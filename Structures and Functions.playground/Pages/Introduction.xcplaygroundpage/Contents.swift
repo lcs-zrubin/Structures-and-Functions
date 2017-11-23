@@ -15,4 +15,6 @@
  
  */
 //: NOTE: Parts of this multi-page playground are adapted from [The Swift Programming Language Guide - Functions](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158).
+//:
+//: NOTE: Parts of this multi-page playground are adapted from [The Swift Programming Language Guide - Structures](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/ClassesAndStructures.html).
 
