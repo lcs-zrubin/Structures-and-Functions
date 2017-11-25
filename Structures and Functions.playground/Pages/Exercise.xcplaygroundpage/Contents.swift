@@ -32,10 +32,12 @@ struct Line {
     var yInt : Double = 0
 }
 
-var harvey = Line(rise: 1, run: 2, yInt: 5)
-var pointy = Point(x: 6, y: 7)
+var existingLine = Line(rise: -1, run: 2, yInt: 9.5)
+var point = Point(x: 6, y: 1.5)
 
-var harveySlope : Double = harvey.rise / harvey.run
-var harveyNegRecip : Double = (harvey.run / harvey.rise)*(-1)
-var pointyLineIntercept : Double = (pointy.y - (harveyNegRecip * pointy.x))
-
+var existingLineSlope : Double = existingLine.rise / existingLine.run
+var existingLineNegRecip : Double = (existingLine.run / existingLine.rise)*(-1)
+var newLineYIntercept : Double = (point.y - (existingLineNegRecip * point.x))
+var pointOfIntersectionXValue : Double = ((newLineYIntercept - existingLine.yInt)/(existingLineSlope - existingLineNegRecip))
+var point0fIntersectionYValue : Double = existingLineSlope * pointOfIntersectionXValue + existingLine.yInt
+var shortestDistance : Double = sqrt((pow(pointOfIntersectionXValue - point.x, 2)+pow(point0fIntersectionYValue - point.y, 2)))
